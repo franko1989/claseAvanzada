@@ -7,11 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>hola {{$usuarios}}</h1>
+    <h1>Usuarios</h1>
+
     <ul>
         @foreach ($usuarios as $usuario)
         <li>
-            {{$usuario['name']}} - {{implode(', ',$usuario['profesion']??[])}}
+            {{ $usuario['name'] }} - {{ $usuario['profesion'] }}
         </li>
 
         @endforeach
